@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الزاوية الأكاديمية</title>
+    <link rel="stylesheet" href="corner.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- القائمة الجانبية -->
+      <section id="side">
+          <ul class="nav-menu">
+              <br>
+                <li><a href="../الرئيسية/cent.html" class="active">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a href="../الأمانات/sev.html">الأمانات <i class="fas fa-chevron-down"></i></a> <br>
+                    <ul class="dropdown-menu">
+                        <li><a href="../الأمانات/sev.html">الأكاديمية</a></li>
+                        <li><a href="../الأمانات/sev.html">الإعلامية</a></li>
+                        <li><a href="../الأمانات/sev.html">الثقافية</a></li>
+                        <li><a href="../الأمانات/sev.html">المالية</a></li>
+                        <li><a href="../الأمانات/sev.html">الرياضية</a></li>
+                    </ul>
+                </li>
+                <li><a href="../المجلة/mag.html">المجلة العلمية</a></li>
+                <li><a href="../اللوحة/bord.html">لوحة الإعلانات</a></li>
+            </ul>
+     </section>
+
+    <!-- الهيدر العلوي -->
+    <section class="the1">
+       
+        <div class="icon">
+            <i class="fa-solid fa-bars" id="icn"></i>
+        </div>
+         <div class="logo" id="logo">
+            <h2>BME28</h2>
+        </div>
+    </section>
+
+    <!-- هيدر الصفحة -->
+    <header>
+        <section class="the2">
+            <h1>الزاوية الأكاديمية</h1>
+            <p>منصة لتبادل المعرفة والخبرات الأكاديمية بين طلاب الهندسة الطبية</p>
+        </section>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <!-- فلترة المحتوى -->
+        <div class="filter-buttons">
+            <button class="active">الكل</button>
+            <button>مقالات بحثية</button>
+            <button>نصائح دراسية</button>
+            <button>موارد تعليمية</button>
+        </div>
+
+        <!-- البطاقات التعليمية -->
+        <div class="cards-container">
+            <!-- مقالة بحثية -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-book-open"></i>
+                    <span class="category">بحث علمي</span>
+                </div>
+                <h3>تطبيقات الذكاء الاصطناعي في التشخيص الطبي</h3>
+                <p>استعراض لأحدث التطورات في مجال الذكاء الاصطناعي وتأثيرها على دقة التشخيص الطبي...</p>
+                <div class="card-footer">
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                    <span class="date">15 مارس 2024</span>
+                </div>
+            </div>
+
+            <!-- نصيحة دراسية -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <span class="category">نصيحة دراسية</span>
+                </div>
+                <h3>كيفية إدارة الوقت خلال فترة الامتحانات</h3>
+                <p>أساليب فعالة لتنظيم الوقت وتجنب الإجهاد خلال فترات الضغط الأكاديمي...</p>
+                <div class="card-footer">
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                    <span class="date">10 مارس 2024</span>
+                </div>
+            </div>
+
+            <!-- موارد تعليمية -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-database"></i>
+                    <span class="category">موارد مجانية</span>
+                </div>
+                <h3>قائمة بأفضل المصادر المفتوحة للتعلم</h3>
+                <p>دليل شامل لأهم المنصات التعليمية المجانية في مجال الهندسة الطبية...</p>
+                <div class="card-footer">
+                    <a href="#" class="read-more">قراءة المزيد</a>
+                    <span class="date">5 مارس 2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم النماذج الدراسية -->
+        <section class="study-resources">
+            <h2><i class="fas fa-file-pdf"></i> نماذج دراسية</h2>
+            <div class="documents-grid">
+                <div class="doc-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>نموذج تقرير معمل</h4>
+                    <a href="#" download>تحميل</a>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>قوالب مشاريع التخرج</h4>
+                    <a href="#" download>تحميل</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- نفس السكريبت -->
+    <script>
+        const hamburger = document.querySelector('.icon');
+        const navMenu = document.querySelector('#side');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#side') && !e.target.closest('.icon')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                hamburger.style.color = "#fff";
+            }
+        });
+    </script>
+</body>
+</html>
