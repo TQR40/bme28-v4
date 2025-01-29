@@ -154,7 +154,7 @@ function back2() {
     card2.style.display = "none";
     body.style.overflow = "auto";
 }
-
+/*
 function comeup() {
     if (students.includes(user.value)&& user.value != "") {
         if (pass1.value === pass2.value) {
@@ -176,7 +176,7 @@ window.location.href = "الرئيسية/cent.html";
         alert("!الرقم الجامعي المدخل غير معرف");
     }
 }
-
+*/
 // الايفينتس
 singin.onclick = show1;
 b_btn.onclick = back1;
@@ -184,8 +184,13 @@ singup.onclick = show2;
 ab_btn.onclick = back2;
 
 // الشروط
-submit2.onclick = comeup;
-submit1.onclick = comein;
+submit2.onclick = function(){
+window.location.href = "الرئيسية/cent.html";    
+};
+submit1.onclick = function(){
+window.location.href = "الرئيسية/cent.html";    
+};
+
  </script>
 </html> 
 
